@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Game;
+    text-decoration: none;
+}
+@font-face {
+    font-family: Inter;
+    src: url("../fonts/Inter-Bold.ttf");
+}
+@font-face {
+    font-family: Game;
+    src: url("../fonts/GamestationText.otf");
+}
+nav{
+    width:100%;
+    height:15vh;
+    background-color: black;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.href
+{
+    color:#FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Inter;
+}
+.logo{
+    width:17%;
+    height:7vh;
+}
+.input{
+    background: none;
+    width:20%;
+    height:4vh;
+    border-radius: 26px;
+    border-color: #FFFFFF99;
+    padding:1%;
+}
+.logo_btn{
+    width:8%;
+    height:4vh;
+    border-color: red;
+    border-radius: 26px;
+    background: none;
+    color:#FFFFFF;
+}
+.bg{
+    width:100%;
+    height:100vh;
+    background: url("../img/bg-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#nazva{
+    font-family: Game;
+    font-size: 5rem;
+}
+#bg-btn{
+    width:20%;
+    height:5vh;
+    color:#FFFFFF;
+    background-color: red;
+    border-radius: 26px;
+    border: none;
+}
+.div{
+    padding-top: 20vh;
+    padding-left: 20%;
+}
+#p{
+    word-spacing: 1%;
+}
+section{
+    width:100%;
+    height:100vh;
+    background: rgb(12, 12, 12);
+    
+}       
