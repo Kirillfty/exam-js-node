@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: Game;
     text-decoration: none;
+    color:#FFFFFF;
+}
+body{
+    background-color: black;
 }
 @font-face {
     font-family: Inter;
@@ -74,9 +78,70 @@ nav{
 #p{
     word-spacing: 1%;
 }
-section{
+.section{
     width:100%;
     height:100vh;
-    background: rgb(12, 12, 12);
-    
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 50%, rgba(255,0,0,1) 100%);
 }       
+.txt{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.txt-h1{
+    font-size: 3rem;
+}
+#tovar{
+    width:100%;
+    height:65vh;
+   
+}
+.section{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bg-2{
+    width:100%;
+    height:80vh;
+    background-image: url("../img/bg-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cont{
+    justify-content: space-around;
+    position: relative;
+}
+article{
+    background-color: rgba(34, 34, 34, 1);
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bord{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+footer{
+    display:flex;
+    justify-content: center;
+    padding:2%;
+}
+.nav{
+    display:flex;
+    justify-content:space-around;
+}
+#footer-logo{
+    display: flex;
+    width:65%;
+    height:5.5vh;
+    align-self: center;
+}
+#hh1{
+    font-size: 1.2rem;
+}
+.wr{
+    width:60%;
+}
