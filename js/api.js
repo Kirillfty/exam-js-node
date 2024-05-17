@@ -12,8 +12,8 @@ const Get_U = async function (){
             let img = document.createElement('img');
             let btn_cart = document.createElement('button');
             img.style.cssText = `
-            width:300px;
-            height:15vh;
+            width:250px;
+            height:17vh;
             border-radius:5%;
             `;
             sale.style.cssText = `
@@ -23,6 +23,7 @@ const Get_U = async function (){
             p1.style.cssText=`
             color:black;
             font-size:15px;
+            text-align:center;
             `
             div.style.cssText = `
             margin-top:5%;
