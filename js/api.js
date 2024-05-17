@@ -1,5 +1,4 @@
 let sale = document.querySelector('#sale');
-
 const Get_U = async function (){
     await fetch("https://dummyjson.com/products").then(function(responce){
         return responce.json();
@@ -26,6 +25,7 @@ const Get_U = async function (){
             font-size:15px;
             `
             div.style.cssText = `
+            margin-top:5%;
             background-color:white;
             margin-bottom:2%;
             width:300px;
