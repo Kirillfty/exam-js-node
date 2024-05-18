@@ -57,13 +57,16 @@ const Get_U = async function (){
             p1.innerHTML = `
              ${prod[i].description}
              `
-             btn_cart.innerText = 'buy'
+             btn_cart.innerHTML = prod[i].price;
             div.appendChild(img);
             div.appendChild(p);
             div.appendChild(p1);
             div.appendChild(btn_cart);
             sale.appendChild(div);
-            
+            btn_cart.addEventListener('click',function(e){
+                e.preventDefault();
+               localStorage.setItem('tovar',JSON.stringify(prod[i])); 
+            })
         }        
     })
 }
