@@ -35,7 +35,7 @@ function Cart(){
         align-items:center;
         `
         p.style.cssText = `
-        color:black;
+        color:white;
         text-align:center;
         `
         btn_cart.style.cssText = `
@@ -49,7 +49,7 @@ function Cart(){
         `
         img.setAttribute('src', tovar[i].thumbnail)
         p.innerHTML = `
-        ${tovar[i].brand}
+        ${tovar[i]}
         `
         p1.innerHTML = `
          ${tovar[i].description}
