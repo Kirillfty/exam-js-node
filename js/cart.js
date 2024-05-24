@@ -1,8 +1,9 @@
 let cart = document.querySelector('#cart');
 let tovar = JSON.parse(localStorage.getItem('tovar'));
 console.log(tovar);
-function Cart(){
+function cartFunc(){
     for(let i=0;i < tovar.length;i++){
+        console.log(tovar[i])
         let div = document.createElement('div');
         let p = document.createElement('p'); 
         let p1 = document.createElement('p');    
@@ -13,10 +14,12 @@ function Cart(){
         height:17vh;
         border-radius:5%;
         `;
-        sale.style.cssText = `
-        flex-wrap:wrap;
-        gap:3%;
-        `
+        cart.style.cssText = `
+        display:flex;
+        justify-content:space-around;
+         flex-wrap:wrap;
+         gap:3%;
+         `
         p1.style.cssText=`
         color:black;
         font-size:15px;
@@ -55,6 +58,14 @@ function Cart(){
          ${tovar[i].description}
          `
          btn_cart.innerHTML = '-';
+         function act(event) {
+            event.target.parentElement.remove();
+        }
+        
+        // Блок #2
+        document.querySelectorAll('button.button').forEach(
+            button => button.addEventListener('click', act)
+        );
         div.appendChild(img);
         div.appendChild(p);
         div.appendChild(p1);
@@ -62,4 +73,4 @@ function Cart(){
         cart.appendChild(div);
     }
 }
-Cart();
+cartFunc();

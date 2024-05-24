@@ -1,5 +1,5 @@
 const Get_U = async function (){
-    await fetch("./json/users.json").then(function(responce){
+    await fetch("json/users.json").then(function(responce){
         return responce.json();
     }).then(function(dataUser){
         console.log(dataUser);
@@ -16,7 +16,7 @@ let user = {
     password:null
 }
 
-form.addEventListener('click',function(e){
+form.addEventListener('submit',function(e){
     e.preventDefault();
     Post();
 })
@@ -26,12 +26,15 @@ const Post = async function (user){
         name:inp.value,
         password:inp1.value
     }
-    await fetch("../json/users.json",{
-        method:'POST',
-        headers:{
-            'Content-Type':'application.json; charset=utf-8'
-        },
-        body:JSON.stringify(user)
-
-    })
+    await fetch("json/users.json/", {
+        method: "PUT",
+        body: JSON.stringify({
+          email: inp2.value,
+          name: inp.value,
+          password: inp1.value
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      });
 }

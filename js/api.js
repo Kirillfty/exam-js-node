@@ -1,4 +1,7 @@
 let sale = document.querySelector('#sale');
+let accept =[];
+localStorage.setItem('tovar',JSON.stringify(accept))
+
 const Get_U = async function (){
     await fetch("https://dummyjson.com/products").then(function(responce){
         return responce.json();
@@ -64,8 +67,13 @@ const Get_U = async function (){
             div.appendChild(btn_cart);
             sale.appendChild(div);
             btn_cart.addEventListener('click',function(e){
-                e.preventDefault();
-               localStorage.setItem('tovar',JSON.stringify(prod[i])); 
+                if(localStorage.getItem('tovar')){
+                    let a = JSON.parse(localStorage.getItem('tovar'));
+                    console.log(a, prod[i]);
+                    a.push(prod[i]);
+                    localStorage.setItem('tovar',JSON.stringify(a));   
+                }
+
             })
         }        
     })
