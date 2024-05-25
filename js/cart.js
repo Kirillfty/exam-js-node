@@ -57,15 +57,13 @@ function cartFunc(){
         p1.innerHTML = `
          ${tovar[i].description}
          `
-         btn_cart.innerHTML = '-';
-         function act(event) {
-            event.target.parentElement.remove();
-        }
-        
-        // Блок #2
-        document.querySelectorAll('button.button').forEach(
-            button => button.addEventListener('click', act)
-        );
+         btn_cart.addEventListener('click',function(){
+            div.style.cssText = `
+            display:none;
+            `
+            
+         })
+         btn_cart.innerText = tovar[i].price;
         div.appendChild(img);
         div.appendChild(p);
         div.appendChild(p1);
